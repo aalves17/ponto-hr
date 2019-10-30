@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  /*ocupar tela inteira*/
+  min-height:  100%;
+}
+
+body{
+  background: #000 url('./assets/bgImage.png') no-repeat;
+  background-size: cover;
+}
+
+.content{
+  margin: 80px auto 0;
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content form{
+  display: flex;
+}
