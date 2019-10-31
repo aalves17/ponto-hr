@@ -4,13 +4,14 @@ import getCurrentDate from './utils/currentdate.js';
 
 function App() {
   const [id, setId] = useState();
+  const [datetime, setDatetime] = useState(getCurrentDate());
 
   function handleSubmit(){
 
   }
 
   function handleChange(){
-    console.log(getCurrentDate());
+
   }
 
   return (
@@ -21,7 +22,7 @@ function App() {
             <input type="text" name="id" value={id} onChange={handleChange}/>
 
             <label>CURRENT DATETIME</label>
-            <span align="center"></span>
+            <span align="center">{datetime}</span>
 
             <button type="submit">REGISTER</button>
           </form>

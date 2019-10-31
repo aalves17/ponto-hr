@@ -1,7 +1,7 @@
 import moment from 'moment';
 
 const getCurrentDate = function(){
-    return moment().format('MMMM Do YYYY, h:mm:ss a');
+    return moment().format('LLLL');
 }
 
 export default getCurrentDate;
