@@ -66,3 +66,9 @@ body{
   background: steelblue;
   cursor: pointer;
 }
+
+#notfound{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
