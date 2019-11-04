@@ -4,7 +4,7 @@ import { usePosition } from 'use-position';
 
 export default function Home(){
     const { latitude, longitude } = usePosition();
-    const [id, setId] = useState();
+    const [employeeID, setEmployeeID] = useState('');
     let [datetime, setDatetime] = useState(getCurrentDate());
 
     setInterval(function(){
@@ -12,21 +12,22 @@ export default function Home(){
     },60000);
 
     function handleSubmit(){
-        alert("enviado");
+        alert("id = " + {employeeID});
     }
 
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <code>
-                    latitude: {latitude}<br/>
-                    longitude: {longitude}<br/>
-                </code>
                 <label>ID</label>
-                <input type="text" name="id" value={id} placeholder="Your company ID" onChange={event => setId(event.target.value)}/>
-
+                <input
+                    id="id"
+                    type="text"
+                    placeholder="Your employee ID"
+                    value={employeeID}
+                    onChange={event => setEmployeeID(event.target.value)}
+                />
                 <label>CURRENT DATETIME</label>
-                <span align="center">{datetime}</span>
+                <span>{datetime}</span>
 
                 <button type="submit">REGISTER</button>
             </form>

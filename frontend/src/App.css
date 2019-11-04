@@ -48,10 +48,6 @@ body{
   font-size: 16px;
 }
 
-.content span{
-  margin: 5px 20px;
-}
-
 .content button{
   padding: 15px;
   margin-top: 10px;
@@ -71,4 +67,9 @@ body{
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.container a{
+  margin-top:10px;
+  align-self: center;
 }
