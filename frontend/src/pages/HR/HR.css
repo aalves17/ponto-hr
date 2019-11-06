@@ -1,0 +1,48 @@
+.logo{
+    height: 4em;
+}
+
+.sidebar{
+    width: 17em;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    border-right: 1px solid lightgrey;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: grey;
+}
+
+.sidebar a:hover{
+    color: #3F51B5;
+}
+
+.sidebar ul{
+    padding: 2em;
+}
+
+.sidebar li{
+    list-style: none;
+    padding: 1em;
+}
+/***********************************************************/
+
+.notification-bar{
+    margin-left: 17em;
+    height: 4em;
+    border-bottom: 1px solid lightgrey;
+}
+
+/***********************************************************/
+
+.app-main-container{
+    margin-left: 17em;
+    padding: 0px 10px;
+    height: 100%;
+    background: #000 url('../../assets/dashboardBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em;
+}
