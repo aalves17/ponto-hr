@@ -1,0 +1,10 @@
+#notfound{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #notfound a{
+    margin-top:10px;
+    align-self: center;
+  }

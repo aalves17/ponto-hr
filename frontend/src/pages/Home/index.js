@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import getCurrentDate from '../../utils/currentdate';
 import { usePosition } from 'use-position';
+import '../../pages/Home/Home.css'
 
 export default function Home(){
     const { latitude, longitude } = usePosition();
@@ -17,20 +18,24 @@ export default function Home(){
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <label>ID</label>
-                <input
-                    id="id"
-                    type="text"
-                    placeholder="Your employee ID"
-                    value={employeeID}
-                    onChange={event => setEmployeeID(event.target.value)}
-                />
-                <label>CURRENT DATETIME</label>
-                <span>{datetime}</span>
+            <div className="container">
+            <div className="content">
+                <form onSubmit={handleSubmit}>
+                    <label>ID</label>
+                    <input
+                        id="id"
+                        type="text"
+                        placeholder="Your employee ID"
+                        value={employeeID}
+                        onChange={event => setEmployeeID(event.target.value)}
+                    />
+                    <label>CURRENT DATETIME</label>
+                    <span>{datetime}</span>
 
-                <button type="submit">REGISTER</button>
-            </form>
+                    <button type="submit">REGISTER</button>
+                </form>
+            </div>
+            </div>
         </>
     );
 }
