@@ -1,5 +1,7 @@
 .logo{
     height: 4em;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 5px;
 }
 
 .sidebar{
@@ -20,7 +22,7 @@
 }
 
 .sidebar ul{
-    padding: 2em;
+    padding: 10px;
 }
 
 .sidebar li{
