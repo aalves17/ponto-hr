@@ -4,7 +4,12 @@ module.exports = {
     async get(req, res){
         return res.json({"msg": "metodo GET EMPLOYEE"});
     },
-    async add(req, res){
-        return res.json({"msg": "metodo ADD"});
+    add(req, res){
+        const entity = new Employee(req.body);
+
+        entity.save(err =>{
+            if(err) return res.status(500).send(err);
+            return res.status(200).send(entity);
+        });
     }
 }

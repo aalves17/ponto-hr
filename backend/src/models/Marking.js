@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const MarkingSchema = new mongoose.Schema({
     employeeId: Number,

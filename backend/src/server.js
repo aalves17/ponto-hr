@@ -6,10 +6,14 @@ const routes = require('./routes');
 const app = express();
 const server = http.Server(app);
 
-mongoose.connect('mongodb://aamontanher:aamontanher@cluster0-shard-00-00-yludg.mongodb.net:27017,cluster0-shard-00-01-yludg.mongodb.net:27017,cluster0-shard-00-02-yludg.mongodb.net:27017/ponto_db?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://aamontanher:aamontanher@cluster0-yludg.mongodb.net/cc_db?retryWrites=true&w=majority', {
+    useCreateIndex: true,
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useUnifiedTopology: true, // commented out currently
+    dbName: 'cc_db'
 });
+
+app.use(express.json());
 
 app.use(routes);
 server.listen(3333);
