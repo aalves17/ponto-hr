@@ -16,10 +16,9 @@ body{
     width:100%;
     background: white;
     margin-top: 50px;
-    border-radius: 5px;
     padding: 30px;
-    border-style: dashed;
-    border-color: gray;
+    border-radius: 8px;
+    border: 1px solid #CED4DA;
   }
 
   .content form{
