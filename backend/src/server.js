@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const http = require("http");
+const http = require("http"); //carregando modulo HTTP
+const routes = require('./routes');
 
 const app = express();
 const server = http.Server(app);
@@ -10,4 +11,5 @@ mongoose.connect('mongodb://aamontanher:aamontanher@cluster0-shard-00-00-yludg.m
     useUnifiedTopology: true,
 });
 
+app.use(routes);
 server.listen(3333);
