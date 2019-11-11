@@ -48,3 +48,7 @@
     background-size: cover;
     padding: 2em;
 }
+
+a:active {
+    color: yellow;
+  }
