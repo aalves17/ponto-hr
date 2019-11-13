@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const MarkingSchema = new mongoose.Schema({
-    employeeId: Number,
-    datetime: Date,
-    entrance: Date,
-    exit: Date
+    chapa: Number,
+    lat: Number,
+    long: Number,
+    currentDateTime: Date,
 });
 
 module.exports = mongoose.model('Marking', MarkingSchema);

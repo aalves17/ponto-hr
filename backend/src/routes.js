@@ -1,5 +1,6 @@
 const express = require('express');
 const EmployeeController = require('./controllers/EmployeeController');
+const MarkingController = require('./controllers/MarkingController');
 
 const routes = express.Router();
 
@@ -13,5 +14,6 @@ routes.post('/employee', EmployeeController.add);
 
 
 /* MARKING */
+routes.post('/marking', MarkingController.add);
 
 module.exports = routes;
