@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import getCurrentDate from '../../utils/currentdate';
 import { usePosition } from 'use-position';
-import '../../pages/Home/Home.css'
+import '../../pages/Home/Home.css';
+import api from '../../services/api';
 
 export default function Home(){
     const { latitude, longitude } = usePosition();
@@ -12,8 +13,27 @@ export default function Home(){
       setDatetime(getCurrentDate());
     },60000);
 
-    function handleSubmit(){
-        alert("id = " + {employeeID});
+    async function handleSubmit(event){
+        event.preventDefault();
+
+        var marking = {
+            chapa: employeeID,
+            lat: latitude,
+            long: longitude,
+            currentDateTime: getCurrentDate()
+        }
+
+        console.dir("before API");
+
+        const response = await api.post('/marking', marking);
+
+        console.dir("after API");
+
+        if(response.status.equals(200)){
+            alert("saved");
+        }else{
+            alert("error");
+        }
     }
 
     return (
