@@ -10,7 +10,6 @@ const server = http.Server(app);
 mongoose.connect('mongodb+srv://aamontanher:aamontanher@cluster0-yludg.mongodb.net/cc_db?retryWrites=true&w=majority', {
     useCreateIndex: true,
     useNewUrlParser: true,
-    useUnifiedTopology: true, // commented out currently
     dbName: 'cc_db'
 });
 

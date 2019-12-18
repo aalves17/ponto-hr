@@ -3,6 +3,7 @@ import { NavLink, Route, HashRouter } from 'react-router-dom';
 import '../HR/HR.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserClock, faUser, faList, faDatabase, faCheck} from '@fortawesome/free-solid-svg-icons';
+import clock from '../../assets/clock.png';
 
 import NewEmp from "./NewEmp";
 import NewMark from "./NewMark";
@@ -14,7 +15,7 @@ class HR extends React.Component{
             <HashRouter>
                 <div className="sidebar">
                     <div className="logo">
-                        <h1 align="center">img</h1>
+                        <h1 align="center"><img src={clock} alt="Clock"/></h1>
                     </div>
                     <ul>
                         <li><NavLink  to="/NewMark"><FontAwesomeIcon icon={faUserClock}/> Register Ponto</NavLink ></li>

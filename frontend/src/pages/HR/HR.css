@@ -4,6 +4,11 @@
     padding-top: 5px;
 }
 
+.logo img{
+    width: 1em;
+    padding-bottom: 1em;
+}
+
 .sidebar{
     width: 17em;
     height: 100%;
